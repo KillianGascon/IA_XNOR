@@ -108,8 +108,8 @@ class Neural_Network:
 
 
 myNeuralNetwork = Neural_Network()
-trainingEpochs = 1000
-# trainingEpochs = 10000
+#trainingEpochs = 1000
+trainingEpochs = 10000
 
 for i in range(trainingEpochs):
     print("Epoch #" + str(i) + "\n")
