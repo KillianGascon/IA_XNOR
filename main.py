@@ -16,7 +16,7 @@ xPredicted = np.array(([0,0,1]), dtype=float)
 X = X/np.amax(X, axis=0)
 
 # Maximum de xPredicted (données d'entrée de la prédiction
-xPredicted = xPredicted/np.array(xPredicted, axis=0)
+xPredicted = xPredicted/np.amax(xPredicted, axis=0)
 
 # Fichier de perte pour le graphique
 lossFile = open("SumSquaredLossList.csv", "w")
@@ -36,7 +36,7 @@ class Neural_Network:
         self.W1 = np.random.randn(self.inputLayerSize, self.hiddenLayerSize)
 
         # Matrice 4x1 pour la couche cachée en sortie
-        self.W2 = np.random.randn(self.inputLayerSize, self.hiddenLayerSize)
+        self.W2 = np.random.randn(self.hiddenLayerSize, self.outputLayerSize)
 
     def feedForward(self, X):
         # Propagation avant traversant le réseau
